@@ -20,7 +20,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 function defineVariables () {
-    maximaPuntuacion = 5
+    maximaPuntuacion = 9
     velocidadJugadores = 20
     velocidadPelota = 1
     info.player1.setScore(0)
