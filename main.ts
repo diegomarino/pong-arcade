@@ -1,24 +1,6 @@
 function iniciaRonda () {
     posicionaObjetos()
 }
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    jugador2.y += velocidadJugadores
-    if (jugador2.y > scene.screenHeight()) {
-        jugador2.y = scene.screenHeight()
-    }
-})
-controller.up.onEvent(ControllerButtonEvent.Repeated, function () {
-    jugador1.y += -1 * velocidadJugadores
-    if (jugador1.y < 0) {
-        jugador1.y = 0
-    }
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    jugador2.y += -1 * velocidadJugadores
-    if (jugador2.y < 0) {
-        jugador2.y = 0
-    }
-})
 function defineVariables () {
     maximaPuntuacion = 9
     velocidadJugadores = 20
@@ -31,12 +13,6 @@ function iniciaPartida () {
     creaObjetos()
     iniciaRonda()
 }
-controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-    jugador1.y += velocidadJugadores
-    if (jugador1.y > scene.screenHeight()) {
-        jugador1.y = scene.screenHeight()
-    }
-})
 function creaObjetos () {
     scene.setBackgroundImage(img`
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -253,9 +229,9 @@ function posicionaObjetos () {
     pelota.setFlag(SpriteFlag.BounceOnWall, true)
 }
 let pelota: Sprite = null
-let velocidadPelota = 0
-let maximaPuntuacion = 0
-let jugador1: Sprite = null
-let velocidadJugadores = 0
 let jugador2: Sprite = null
+let jugador1: Sprite = null
+let velocidadPelota = 0
+let velocidadJugadores = 0
+let maximaPuntuacion = 0
 iniciaPartida()
