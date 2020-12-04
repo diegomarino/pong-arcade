@@ -8,6 +8,9 @@ function defineVariables () {
     info.player1.setScore(0)
     info.player2.setScore(0)
 }
+function doSomething () {
+	
+}
 function iniciaPartida () {
     defineVariables()
     creaObjetos()
