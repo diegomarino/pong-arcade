@@ -1,6 +1,9 @@
 function iniciaRonda () {
     posicionaObjetos()
 }
+function hazAlgo () {
+	
+}
 function defineVariables () {
     maximaPuntuacion = 9
     velocidadJugadores = 20
